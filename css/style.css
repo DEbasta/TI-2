@@ -58,7 +58,7 @@ button {
     border-radius: 8px;
     color: var(--green);
     background-color: transparent;
-    transition: color, background-color var(--main-transition);
+    transition: color;
 }
 
 button:hover {
@@ -79,4 +79,21 @@ footer {
     line-height: 120%;
     color: var(--green);
     margin: 0;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.main-nav a:hover {
+    color: var(--blue);
 }
