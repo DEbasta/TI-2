@@ -1,9 +1,17 @@
 :root {
-    --black: #212121;
+    --black: #031923;
+    --yellow: #E5BB33;
+    --blue: #205B75;
     --green: #09A494;
-    --white: #fff;
-    --main-transition: .5s;
+    --white: #FFFFFF;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 
 body,
 button,
