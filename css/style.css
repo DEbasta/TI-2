@@ -54,16 +54,16 @@ button {
 button {
     text-transform: lowercase;
     padding: 6px 10px 10px;
-    border: 1px solid var(--green);
+    border: 1px solid var(--yellow);
     border-radius: 8px;
-    color: var(--green);
+    color: var(--yellow);
     background-color: transparent;
     transition: color;
 }
 
 button:hover {
     color: var(--white);
-    background-color: var(--green);
+    background-color: var(--yellow);
 }
 
 footer {
@@ -97,3 +97,86 @@ footer {
 .main-nav a:hover {
     color: var(--blue);
 }
+
+.social,
+.contact {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.social li,
+.contact li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.social-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--yellow);
+    border-radius: 50%;
+    background-color: var(--white);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-link:hover {
+    background-color: var(--yellow);
+}
+
+.social-link_github {
+    background-image: url("../img/social/github.svg");
+}
+
+.social-link_gitlab {
+    background-image: url("../img/social/gitlab.svg");
+}
+
+.social-link_instagram {
+    background-image: url("../img/social/instagram.svg");
+}
+
+.social-link_telegram {
+    background-image: url("../img/social/telegram.svg");
+}
+
+.social-link_vk {
+    background-image: url("../img/social/vk.svg");
+}
+
+.contact-link {
+    display: block;
+    padding: 5px 0 5px 42px;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: var(--blue);
+}
+
+.contact-linkPN {
+    background-image: url("../img/contacts/phone.svg");
+}
+
+.contact-linkMail {
+    background-image: url("../img/contacts/email.svg");
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
