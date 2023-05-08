@@ -1,3 +1,10 @@
+:root {
+    --black: #212121;
+    --green: #09A494;
+    --white: #fff;
+    --main-transition: .5s;
+}
+
 body,
 button,
 a {
@@ -10,7 +17,7 @@ a {
 
 body {
     line-height: 150%;
-}z
+}
 
 h1,
 h2 {
