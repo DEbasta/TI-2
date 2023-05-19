@@ -257,7 +257,7 @@ section {
 }
 
 .skill-level {
-    margin: 4px 0 18px;
+    margin: 4px 0 17px;
     padding: 2px;
     font-size: 0;
     border: 1px solid var(--black);
@@ -305,4 +305,5 @@ p:last-child {
 .main-footer {
     color: var(--white);
     background-color: var(--black);
+    padding: 50px 0;
 }
