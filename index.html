@@ -15,17 +15,20 @@
 <body>
     <div class="container">
         <header class="main-header">
-            <a><img src="img/main-logo.svg" width="60" height="60" alt="logo"></a>
+            <div class="main-header-wrap">
+                <a class="main-header__href"><img class="main-header__logo" src="img/main-logo.svg" width="60" height="60" alt="logo"></a>
+                <button class="nav-btn nav-btn__close"><span class="visually-hidden">Закрыть меню</span></button>
+              </div>
             <nav class="main-nav">
-            <a href="#aboutMe">Обо мне</a>
-            <a href="#skills">Навыки</a>
-            <a href="#interests">Интересы</a>
-            <a href="#contacts">Контакты</a>
-            </nav>
+                <a class="main-nav__href" href="#aboutMe">Обомне</a>
+                <a class="main-nav__href" href="#skills">Навыки</a>
+                <a class="main-nav__href" href="#interests">Интересы</a>
+                <a class="main-nav__href" href="#contacts">Контакты</a>
+              </nav>
         </header>
         <main>
             <section class="intro">
-                <div>
+                <div class="intro__descriptionWrapper">
                     <h1 class="introName">Сергей Константинов</h1>
                     <p class="introProffession">Программист</p>
                 </div>
@@ -45,8 +48,8 @@
                     <h2>Мои навыки</h2>
                     <div class="skillsButtons">
                         <p>Сортировать</p>
-                        <button>По названию</button>
-                        <button>По уровню</button>
+                        <button class="skills__button" data-type="name">По названию</button>
+                        <button class="skills__button" data-type="level">По уровню</button>
                     </div>
                 </div>
                 <dl class="skill-list">
@@ -87,7 +90,8 @@
                     <li class="social-link social-link_gitlab"><a><span class="visually-hidden">GitLab</span></a></li>
                     <li class="social-link social-link_instagram"><a><span class="visually-hidden">Instagram</span></a></li>
                     <li class="social-link social-link_telegram"><a><span class="visually-hidden">Telegram</span></a></li>
-                    <li class="social-link social-link_vk"><a><span class="visually-hidden">Vk</span></a></li>
+                    <li class="social-link social-link_vk"><a><span class="visually-hidden">VK</span></a></li>
+                    <li><a class="social-link social-link_vk"><span class="visually-hidden">VK</span></a></li>
                 </ul>
             </section>
         </main>
