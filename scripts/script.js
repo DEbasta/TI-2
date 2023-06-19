@@ -40,9 +40,10 @@ const skills = {
             parentElement.append(dt, dd);
         });
     },
-
-    
+  
 }
 
 const skillList = document.querySelector('.skill-list');
 skills.generateList(skillList);
+
+

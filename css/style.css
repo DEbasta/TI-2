@@ -25,6 +25,7 @@ a {
 
 body {
     line-height: 150%;
+    background-color: var(--white);
 }
 
 a,
@@ -532,4 +533,29 @@ p:last-child {
     .social {
         gap: 15px;
     }
+}
+
+.dark-theme {
+    --black: #CCCCCC;
+    --white: #031923;
+}
+
+.dark-theme .social-link {
+    background-color: var(--black);
+}
+
+.dark-theme .social-link:hover {
+    background-color: var(--green);
+}
+
+.dark-theme .contact-linkPN {
+    background-image: url("../img/dark-theme/phone.svg");
+}
+
+.dark-theme .contact-linkMail {
+    background-image: url("../img/dark-theme/email.svg");
+}
+
+.dark-theme .main-footer {
+    background-color: var(--green);
 }
