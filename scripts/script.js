@@ -43,8 +43,15 @@ const skills = {
 
     sortByProp: function (parentElement, propName) {
         parentElement.innerHTML = '';
-        // // console.log(`sort by ${propName}`);
-        this.data.sort(compare(propName));
+        if (!this.inSort || this.inSort !== propName) {
+            // console.log(`sort type: ${propName}`);
+            this.data.sort(compare(propName));
+            this.inSort = propName;
+        }
+        else {
+            this.data.reverse();
+            
+        }
         this.generateList(parentElement);
     },
   
