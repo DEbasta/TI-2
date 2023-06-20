@@ -80,3 +80,25 @@ buttonGroup.addEventListener(
     (evt) => evt.target.nodeName === 'BUTTON' && skills.sortByProp(skillList, evt.target.dataset.type)
 );
 
+const menu = {
+    isOpen: true,
+
+    toggle: function(menuElement, button) {
+        menuElement.classList.toggle('main-nav__closed');
+        button.classList.toggle('nav-btn__close');
+        button.classList.toggle('nav-btn__open');
+        if (this.isOpen)
+            button.children[0].innerText = 'Открыть меню';
+        else  button.children[0].innerText = 'Закрыть меню';
+        this.isOpen = !this.isOpen;
+    },
+}
+
+
+const burgerBtn = document.querySelector('.nav-btn');
+const nav = document.querySelector('.main-nav');
+
+menu.toggle(nav, burgerBtn);
+
+burgerBtn.addEventListener('click', () => menu.toggle(nav, burgerBtn));
+
