@@ -82,8 +82,7 @@ buttonGroup.addEventListener(
 
 const menu = {
     isOpen: true,
-
-    toggle: function(menuElement, button) {
+    toggleM: function(menuElement, button) {
         menuElement.classList.toggle('main-nav__closed');
         button.classList.toggle('nav-btn__close');
         button.classList.toggle('nav-btn__open');
@@ -98,7 +97,19 @@ const menu = {
 const burgerBtn = document.querySelector('.nav-btn');
 const nav = document.querySelector('.main-nav');
 
-menu.toggle(nav, burgerBtn);
+menu.toggleM(nav, burgerBtn);
 
-burgerBtn.addEventListener('click', () => menu.toggle(nav, burgerBtn));
+burgerBtn.addEventListener('click', () => menu.toggleM(nav, burgerBtn));
+
+const themeCheckBox = document.querySelector('.switch-checkbox');
+
+themeCheckBox.addEventListener('change', () => {
+    // if (theme === themeStateEnum.dark) {
+    //     theme = themeStateEnum.light;
+    // } else {
+    //     theme = themeStateEnum.dark;
+    // }
+    // localStorage.setItem('theme', theme);
+    document.body.classList.toggle('dark-theme');
+});
 
