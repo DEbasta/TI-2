@@ -102,14 +102,27 @@ menu.toggleM(nav, burgerBtn);
 burgerBtn.addEventListener('click', () => menu.toggleM(nav, burgerBtn));
 
 const themeCheckBox = document.querySelector('.switch-checkbox');
+const dark = 'dark', light = 'light';
+const localStorage = window.localStorage;
+
+let theme = localStorage.getItem('theme');
+
 
 themeCheckBox.addEventListener('change', () => {
-    // if (theme === themeStateEnum.dark) {
-    //     theme = themeStateEnum.light;
-    // } else {
-    //     theme = themeStateEnum.dark;
-    // }
-    // localStorage.setItem('theme', theme);
+    if (theme === dark) {
+        theme = light;
+    } else {
+        theme = dark;
+    }
+    localStorage.setItem('theme', theme);
     document.body.classList.toggle('dark-theme');
 });
+
+if (!theme) {
+    localStorage.setItem('theme', dark);
+    theme = dark;
+} else if (theme !== dark) {
+    document.body.classList.remove('dark-theme');
+    themeCheckBox.checked = !themeCheckBox.checked;
+}
 
