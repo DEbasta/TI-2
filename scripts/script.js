@@ -40,10 +40,36 @@ const skills = {
             parentElement.append(dt, dd);
         });
     },
+
+    sortByProp: function (parentElement, propName) {
+        parentElement.innerHTML = '';
+        // // console.log(`sort by ${propName}`);
+        this.data.sort(compare(propName));
+        this.generateList(parentElement);
+    },
   
 }
 
+const compare = (prop) => {
+    return (a, b) => {
+        if (a[prop] < b[prop]) {
+            return -1;
+        }
+
+        if (a[prop] > b[prop]) {
+            return 1;
+        }
+
+        return 0;
+    }
+};
+
 const skillList = document.querySelector('.skill-list');
 skills.generateList(skillList);
+const buttonGroup = document.querySelector('.skillsButtons');
 
+buttonGroup.addEventListener(
+    'click',
+    (evt) => evt.target.nodeName === 'BUTTON' && skills.sortByProp(skillList, evt.target.dataset.type)
+);
 
