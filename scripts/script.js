@@ -1,27 +1,6 @@
 const skills = {
     inSort: false,
-    data: [
-        {
-            name: 'html',
-            level: 10,
-            icon: 'html.svg',
-        },
-        {
-            name: 'css',
-            level: 15,
-            icon: 'css.svg',
-        },
-        {
-            name: 'python',
-            level: 5,
-            icon: 'python.svg',
-        },
-        {
-            name: 'c++',
-            level: 20,
-            icon: 'c++.svg',
-        },
-    ],
+    data: [],
 
     generateList: function (parentElement) {
         this.data.forEach((skill) => {
@@ -54,6 +33,16 @@ const skills = {
         }
         this.generateList(parentElement);
     },
+
+    initList: function (url, parentElement, skillsSection) {
+        fetch(url).then(data => data.json()).then(jsonData => {
+                this.data = jsonData.data;
+                this.generateList(parentElement);
+            }).catch(err => {
+                console.error('что-то пошло не так');
+                skillsSection.remove();
+            });
+    },
   
 }
 
@@ -72,7 +61,9 @@ const compare = (prop) => {
 };
 
 const skillList = document.querySelector('.skill-list');
-skills.generateList(skillList);
+// skills.generateList(skillList);
+const skillsSection = document.querySelector('#skills');
+skills.initList('db/skills.json', skillList, skillsSection);
 const buttonGroup = document.querySelector('.skillsButtons');
 
 buttonGroup.addEventListener(

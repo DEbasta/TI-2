@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "name": "html",
+            "level": 10,
+            "icon": "html.svg"
+        },
+        {
+            "name": "css",
+            "level": 15,
+            "icon": "css.svg"
+        },
+        {
+            "name": "python",
+            "level": 5,
+            "icon": "python.svg"
+        },
+        {
+            "name": "c++",
+            "level": 20,
+            "icon": "c++.svg"
+        }
+    ]
+}
